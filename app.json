@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/timesell/timesell",
+    "pages/index/detail/detail",
+    "pages/index/search/search",
+    "pages/classif/classif",
+    "pages/votes/votes",
+    "pages/shopcar/shopcar",
+    "pages/order/confirm/confirm",
+    "pages/order/all-orders/all-orders",
+    "pages/order/return/return",
+    "pages/order/return-detail/return-detail",
+    "pages/mine/share/share",
+    "pages/mine/mine",
+    "pages/mine/integral/integral",
+    "pages/mine/remain/remain",
+    "pages/mine/sell/sell",
+    "pages/mine/chargeintopay/chargeintopay",
+    "pages/mine/employees/employees",
+    "pages/login/login",
+    "pages/order/shopconfirm/shopconfirm",
+    "pages/index/timesell/sell/sell",
+    "pages/order/robconfirm/robconfirm",
+    "pages/order/wuliu/wuliu",
+    "pages/close/close",
+    "pages/order/all-orders/wuliu/wuliu",
+    "pages/mine/modifypwd/modifypwd"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#B80106",
+    "navigationBarTitleText": "化妆品",
+    "navigationBarTextStyle": "#ffffff"
+  },
+  "tabBar": {
+    "color": "#B0B0B0",
+    "selectedColor": "#B80106",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/tabbar/one_s.png",
+        "selectedIconPath": "imgs/tabbar/one_n.png"
+      },
+      {
+        "pagePath": "pages/classif/classif",
+        "text": "分类",
+        "iconPath": "imgs/tabbar/two_s.png",
+        "selectedIconPath": "imgs/tabbar/two_n.png"
+      },
+      {
+        "pagePath": "pages/votes/votes",
+        "text": "投票",
+        "iconPath": "imgs/tabbar/three_s.png",
+        "selectedIconPath": "imgs/tabbar/three_n.png"
+      },
+      {
+        "pagePath": "pages/shopcar/shopcar",
+        "text": "购物车",
+        "iconPath": "imgs/tabbar/four_s.png",
+        "selectedIconPath": "imgs/tabbar/four_n.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "imgs/tabbar/five_s.png",
+        "selectedIconPath": "imgs/tabbar/five_n.png"
+      }
+    ]
+  }
+}

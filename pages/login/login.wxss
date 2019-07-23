@@ -1,0 +1,104 @@
+.imgbox{
+  width: 200rpx;
+  height: 200rp;
+  margin: auto;
+  text-align: center;
+  /* border: 1rpx saddlebrown solid; */
+  margin-top: 30rpx
+}
+.imgbox image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+
+}
+.classes{
+  width: 90%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: auto;
+  border-bottom: 1rpx solid #bcbcbc;
+  font-size: 28rpx;
+}
+.fenlei{
+  width:30%;
+  padding-left: 10rpx;
+  color: #666666
+}
+ input{
+    width: 400rpx;
+    color: #333;
+    font-size: 28rpx;
+    margin-top: 20rpx;
+  }
+button::after{
+  display: none
+}
+.btn{
+  width: 500rpx;
+  height: 60rpx;
+  border: 1rpx solid #B80106;
+  border-radius: 10rpx;
+  line-height: 50rpx;
+  color: #B80106;
+  font-size: 30rpx;
+  margin-top: 50rpx
+}
+.check{
+  width: 90%;
+  height: 200rpx;
+  margin: auto
+}
+.title{
+  width: 100%;
+  color: #666666;
+  font-size: 28rpx;
+  margin-top: 30rpx
+}
+.chose{
+  width: 100rpx;
+  height: 40rpx;
+  color: #666666;
+  font-size: 28rpx;
+  /* border: 1rpx saddlebrown solid; */
+  margin-right: 30rpx;
+  margin-top: 30rpx
+}
+.box{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #666;
+
+}
+.bg{
+  background: #B80106;
+  border: 1rpx solid #B80106
+}
+.red{
+  color: #B80106
+}
+.topnav{
+  width: 95%;
+  margin: auto;
+  height: 50rpx;
+  color: #666666;
+  font-size: 32rpx;
+  margin: 30rpx 0rpx;
+  text-align: center
+}
+.red{
+  color: #B80106
+}
+.redbg{
+  width: 60rpx;
+  height: 5rpx;
+  background: #B80106;
+  margin-top: 20rpx;
+  margin: auto
+}
+.bar{
+  width: 100rpx;
+  height: 80rpx;
+
+}

@@ -1,0 +1,62 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.94",
+	"appid": "wx7109105b30eccd0e",
+	"projectname": "%E5%8C%96%E5%A6%86%E5%93%81",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
+			"list": [
+				{
+					"id": -1,
+					"name": "订单",
+					"pathName": "pages/order/all-orders/all-orders",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "物流",
+					"pathName": "pages/order/all-orders/wuliu/wuliu",
+					"query": "jsonStr=[{\"name\":\"顺丰\",\"bianhao\":\"shunfeng\",\"dingdan\":\"123456\"},{\"name\":\"圆通快递\",\"bianhao\":\"yuantong\",\"dingdan\":\"800586649991883194\"},{\"name\":\"申通快递\",\"bianhao\":\"shentong\",\"dingdan\":\"123456\"}]"
+				},
+				{
+					"id": -1,
+					"name": "物流详情",
+					"pathName": "pages/order/wuliu/wuliu",
+					"query": "jsonStr={\"name\":\"圆通快递\",\"bianhao\":\"yuantong\",\"dingdan\":\"800586649991883194\"}"
+				},
+				{
+					"id": -1,
+					"name": "改密",
+					"pathName": "pages/mine/modifypwd/modifypwd",
+					"query": ""
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.slideImage{
+  width:750rpx;
+  height: 500rpx;
+  display: block;
+}
+swiper{
+  width: 100%;
+  height: 500rpx
+}

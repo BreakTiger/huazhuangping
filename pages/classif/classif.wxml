@@ -1,0 +1,90 @@
+<!-- 分类 -->
+
+<!--顶部导航  -->
+<view class='topheader fl-arnd'>
+   <view class="{{index==topindex?'current':''}} topnav fl-arnd" wx:for='{{topnav}}' wx:key='ds' data-index='{{index}}' bindtap='changenav'>
+    <view>{{item.nav}}</view>
+    <image wx:if='{{index==topindex}}' src='{{item.img}}'></image>
+    <image wx:if='{{index!=topindex}}' src='{{item.zq}}'></image>
+   </view>
+</view>
+<!--内容 1 -->
+<view class='content' wx:if='{{topindex==0}}'>
+  <!--  左侧导航-->
+  <view class='left'>
+    <scroll-view scroll-y='true' scroll-with-animation scroll-left="{{scrollLength}}" class='scrollY' style='height: {{winHeight}}px'>
+      <view class='all clear'>
+        <block wx:key="lists" wx:for="{{lists}}">
+          <view bindtap='jumpIndex' data-menuindex='{{index}}' data-item='{{item}}'>
+            <view class="text-style {{indexId==index?'active1':''}}">
+              <text class="{{indexId==index?'active1':''}}">{{item.name}}</text>
+               <text class="{{indexId==index?'active':''}}"></text> 
+            </view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+    <!--小系列  -->
+    <view class='classbox' style='top:102rpx;left:180rpx' wx:if='{{block && floor3box.length>0}}'>
+     <scroll-view scroll-y='true' scroll-with-animation style='height: {{winHeight}}px'>
+      <view class='floor1box'>
+          <!-- <view class='classes' bindtap='xilie'>分类二</view> -->
+          <view class='floor2box fle-wrap'>
+            <text class='floor3box' wx:for='{{floor3box}}' wx:key='d' data-item='{{item}}' bindtap='close'>{{item.name}}</text>
+          </view>
+      </view>
+     </scroll-view>
+    </view>
+  </view> 
+  
+  <!--右侧内容  -->
+  <view class='right'>
+      <!--  搜索框-->
+      <view class='searchbox'>
+        <view class='ify_search' catchtap='onSearchTap'>
+          <icon type="search" size="13" color="#666666" />
+          <text class='search-txt'>搜索你喜欢的商品</text>
+        </view>
+      </view>
+      <!--分类商品  -->
+      <view class='goodsbox'>
+        <view class='shopgoods' wx:for='{{array}}' wx:key='s' data-item='{{item}}' bindtap='goodsdetail'>
+            <image src='{{item.wurl}}' ></image>
+            <view class='goodsinfo'>
+                <view class='goodstitle'>{{item.name}}</view>
+                <view class='price'>
+                  <view class='sales1'>销量：{{item.buy_num}}</view>
+                  <!--{{item.buy_num}}  -->
+                  <view class='sales2'>￥{{item.price}}</view>
+                </view>
+                <view class='seal'>库存：{{item.kucun}}</view>
+            </view>
+        </view>
+      </view>
+  </view>
+</view>
+
+<!--内容 2  -->
+<view class='sorting' wx:if='{{topindex==1}}'>
+  <!--搜索框  -->
+  <view class='sraechbox'>
+    <view class='searchinput' catchtap='onSearchTap'>
+      <icon type="search" size="13" color="#666666" />
+      <text class='search-txt'>搜索你喜欢的商品</text>
+    </view>
+  </view>
+  <!--排序  -->
+  <view class='orderbox fl-arnd'>
+     <view class='allbox'>
+        <view class='one' wx:for='{{perorders}}' wx:key='s' data-item='{{item}}' bindtap='goodsdetail'>
+            <image src='{{item.wurl}}'></image>
+            <view class='i1'>{{item.goodsinfo}}</view>
+            <view class='i2 flexba'>
+              <text style='color:#B80106'>￥{{item.price}}</text> 
+              <text style='color:#858585;font-size:26rpx'>销量：88</text>
+            </view>
+        </view>
+
+     </view>
+  </view>
+</view>

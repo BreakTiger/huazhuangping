@@ -1,0 +1,97 @@
+.address-item-container {
+  width: 650rpx;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20rpx 0rpx
+}
+
+/* 为空时 */
+
+/* 容器 */
+
+.address-empty-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+}
+
+/* 图标 */
+
+.add-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 25rpx;
+}
+
+/* 文字 */
+
+.address-empty-container text {
+  font-size: 30rpx;
+  color: #666;
+}
+
+/* 存有内容时 */
+
+/* 盒子 */
+
+.address-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 660rpx;
+ 
+}
+
+/* 名字+联系方式+图标 */
+
+.address-name-phone-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+
+.phone-icon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* 字体 */
+
+.address-name-phone-container text {
+  font-size: 26rpx;
+  color: #333;
+}
+
+/* 删除图标 */
+
+.address_icon {
+  width: 30rpx;
+  height: 29rpx;
+  margin-left: 10rpx;
+}
+
+.address-detail-container{
+ display: flex;
+ flex-direction: row;
+ margin-top: 20rpx;
+}
+
+.address-detail-container text{
+  font-size: 26rpx;
+  color: #333;
+}
+
+
+.address-detail-container .address-data{
+  width: 520rpx;
+  display:block;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+}

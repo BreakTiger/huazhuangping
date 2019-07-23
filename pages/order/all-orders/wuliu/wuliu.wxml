@@ -1,0 +1,8 @@
+<view class='wuliu'>
+  <block wx:for="{{wuliu}}" wx:key="unique">
+    <view class='wuliu-item' bindtap='showWuliu' data-item="{{item}}">
+      <view class='wuliu-name'>{{item.name}}:</view>
+      <view class='wuliu-no'>{{item.dingdan}}</view>
+    </view>
+  </block>
+</view>

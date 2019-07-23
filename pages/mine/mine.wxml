@@ -1,0 +1,64 @@
+<view class='topbg'></view>
+<!--用户信息  -->
+<view class='usercard'>
+  <image class='userimg' src='/imgs/mine/header.png'></image>
+  <view class='bbq'>
+    <view class='username'>触动真美丽</view>
+    <view class='qianming'>冰雪肌肤用朴妍，展现你脱俗的美。</view>
+    <!-- <image class='set' src='/imgs/mine/course.png'></image> -->
+  </view>
+</view>
+<!--订单  -->
+<view class='order'>
+  <view class='orderdetail' style='margin-top:30rpx'>
+    <!--标题  -->
+    <view class='ordertitle' bindtap='allorder'>
+      <view class='myorder'>我的订单</view>
+      <view class='moreorder'>查看更多订单
+        <image class='rightmore' src='/imgs/mine/right.png'></image>
+      </view>
+    </view>
+    <!-- 导航 -->
+    <view class='nav'>
+      <view class='nav-bar'>
+        <view wx:for="{{fourTags}}" wx:key="fourTags" class='fourTags'>
+          <view style="margin-top: 30rpx;" bindtap='toOther' data-index='{{index}}'>
+            <text style='display: block;margin-bottom:10rpx;margin-left:10rpx;font-size: 26rpx;color: #666666;'>{{item.text}}</text>
+            <image src='{{item.url}}' style='width: 60rpx; height: 60rpx;'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!--设置  -->
+<view class='mysetting'>
+  <view class='onefloor fl-betw' bindtap='balance' data-id="{{yuemoney}}">
+    <text>我的余额</text>
+    <view class='right flexb'>
+      <text>￥{{yuemoney.yue}}</text>
+      <image class='rightmore' src='/imgs/mine/right.png' style='margin-left:10rpx'></image>
+    </view>
+
+  </view>
+  <view class='onefloor fl-betw' bindtap='integral'>
+    <text>我的积分</text>
+    <image class='rightmore' src='/imgs/mine/right.png'></image>
+  </view>
+  <view class='onefloor fl-betw' bindtap='toshare'>
+    <text>我的分销</text>
+    <image class='rightmore' src='/imgs/mine/right.png'></image>
+  </view>
+  <view class='onefloor fl-betw' bindtap='totoupiao'>
+    <text>投票</text>
+    <image class='rightmore' src='/imgs/mine/right.png'></image>
+  </view>
+  <view class='onefloor fl-betw' bindtap='tomodifypwd'>
+    <text>修改密码</text>
+    <image class='rightmore' src='/imgs/mine/right.png'></image>
+  </view>
+  <view class='onefloor fl-betw' style='border:hidden' bindtap='toLogout'>
+    <text>切换账号</text>
+    <image class='rightmore' src='/imgs/mine/right.png'></image>
+  </view>
+</view>

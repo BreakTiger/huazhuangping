@@ -1,0 +1,6 @@
+<view class='register'>
+  <view class='companyimg'><image  src='/imgs/index/banner3.jpg'></image></view>
+  <button class='yes' open-type='getUserInfo' bindgetuserinfo="onGotUserInfo" >一键微信登录</button>
+  <button class='no' bindgetuserinfo="onGotUserInfo" >取消</button>
+</view>
+

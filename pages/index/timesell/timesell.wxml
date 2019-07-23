@@ -1,0 +1,44 @@
+<!-- 限时秒杀 -->
+
+<!-- 整体容器 -->
+<view class='all-container'>
+
+  <!-- 公告 -->
+  <view class='header-info' >
+    <!-- 标题 -->
+    <view class='title-box'>
+      秒杀公告
+    </view>
+    <!-- 信息内容 -->
+    <text class='info'>{{gonggao.gonggao}}</text>
+  </view>
+
+  <!-- 商品列表 -->
+  <view class='pro-lists' >
+
+    <block wx:for='{{goods_info_list}}' wx:key='d' >
+      <view class='content' bindtap='timesell' data-item='{{item}}'>
+        <!-- 图片 -->
+        <image src='{{item.url}}' class='goodsimg'></image>
+        <!-- 信息 -->
+        <view class='info-box'>
+          <!-- 名字 -->
+          <view class='goodsname'>
+            {{item.name}}
+          </view>
+          <!-- 进度条 -->
+          <progress class='pro-box' percent='{{item.progress}}' color='#b80106' backgroundColor='#db8082' />
+          <!-- 已购买 -->
+          <text class='buynumbers'>已购买{{item.numbers}}</text>
+          <!-- 价格 -->
+          <text class='price'>￥{{item.price}}</text>
+        </view>
+      </view>
+    </block>
+
+  </view>
+
+  <!-- 悬浮按钮 -->
+  <!-- <image src='/imgs/mine/take.png' class='btn-icon'></image> -->
+
+</view>

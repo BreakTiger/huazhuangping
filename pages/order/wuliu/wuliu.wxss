@@ -1,0 +1,23 @@
+/* pages/order/wuliu/wuliu.wxss */
+
+.wuliu {
+  width: 100%;
+}
+
+.wuliu-item {
+  padding: 10px;
+  font-size: 13px;
+  border-bottom: solid 1px #E3E3E3;
+}
+
+.wuliu-date {
+  width: 100%;
+  line-height: 25px;
+  color: #333;
+}
+
+.wuliu-text {
+  width: 100%;
+  line-height: 25px;
+  color: #333;
+}

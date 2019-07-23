@@ -1,0 +1,68 @@
+<!--订单商品模板 -->
+<!--依赖：无-->
+<!--输入：...carts-->
+<import src="/template/quantity/index.wxml" />
+<template name="cartItemTemplate">
+
+  <view class="cart-item-wrap">
+
+    <view class="cart-item-container" data-cart-id="{{id}}" data-goods-name="{{goods_name}}">
+
+      <!-- 首行：选择按钮+店铺名+删除图标 -->
+      <view class='header'>
+        <!-- 选择按钮 -->
+        <image src='/imgs/car/yuan.png' class='head-icon'></image>
+        <!-- 店铺名 -->
+        <text>{{pro}}</text>
+        <!-- 删除图标 -->
+        <image src='/imgs/car/del.png' class='del-icon'></image>
+      </view>
+
+      <!-- 主信息框 -->
+      <view class='main-box' wx:for='{{lists}}' >
+        <!-- 选择按钮 -->
+        <view class="cart-check-container">
+          <view class="zan-icon zan-icon-{{check ? 'checked' : 'check'}}" data-cart-id="{{id}}" catchtap="onCheckTap" />
+        </view>
+        <!--商品图片-->
+        <view class="cart-item-image" data-goods-id="{{goods_id}}" catchtap="onCartTap">
+          <image src="{{item.goods_image}}"></image>
+          <!-- <image src="/imgs/mine/header.png"></image> -->
+        </view>
+        <!-- 规格信息 -->
+        <view class="cart-info-container">
+          <!-- 商品名字 -->
+          <text class="goods-title-text">{{item.goods_name}}</text>
+
+          <!-- 规格 -->
+          <text class='spec'>规格：{{item.guige}}</text>
+
+          <!-- 价格+组件 -->
+          <view class='goods-price-num-container'>
+            <!-- 价格 -->
+            <text class='price'>￥{{item.price}}</text>
+
+            <!-- 数量按钮 -->
+            <template is="zan-quantity" data="{{ quantity: goods_num, min: 1, max: stock, componentId: id, size: 'small' }}" />
+
+          </view>
+        </view>
+
+
+
+      </view>
+
+
+
+
+
+
+
+
+
+
+
+    </view>
+  </view>
+
+</template>

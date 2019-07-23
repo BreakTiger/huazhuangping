@@ -1,0 +1,115 @@
+<!-- 确认订单 -->
+
+<!-- 模版引入 -->
+<import src="/template/address/item/address-item-template.wxml" />
+<import src="/template/cart/order-item/confirm-order-item.wxml" />
+
+
+<!-- 整体容器 -->
+<view class='all-container'>
+
+  <!-- 顶部带图框 -->
+  <view class='BCV'></view>
+ 
+  <!-- 收货地址+购买的物品 -->
+  <view class='box1'>
+
+    <!-- 收货地址的模版 排布 -->
+    <!-- 样式已写在模版的wxss中 -->
+    <view>
+      <template is="addressItemTemplate" data="{{user,index}}" />
+    </view>
+
+
+    <!-- 商品列表 -->
+    <view class='lists-box'>
+
+        <view class='message'>
+          <!-- 图片 -->
+          <image src='{{goods.wurl}}' class='message_img'></image>
+
+          <!-- 商品名字+规格+价格+数量 -->
+          <view class='info-box'>
+            <text class='goodsname'>{{goods.name}}</text>
+            <text class='guige'>规格：{{goods.goodcapa}}</text>
+            <view class='price-number'>
+              <text>￥{{goods.price}}</text>
+              <text>X{{num}}</text>
+            </view>
+          </view>
+
+        </view>
+    </view>
+
+
+
+
+  </view>
+
+  <!-- 支付配送+商品金额+运费 -->
+  <view class='box2'>
+
+    <!-- 支付配送 -->
+    <view class='item-line'>
+      <text>支付配送：</text>
+      <text>快递</text>
+    </view>
+
+    <!-- 商品金额 -->
+    <view class='item-line'>
+      <text>商品金额：</text>
+      <text>￥{{amount}}</text>
+    </view>
+    <!-- 折扣金额 -->
+    <view class='item-line' wx:if='{{paystatus==1 || paystatus==2}}'>
+      <text>折扣金额：</text>
+      <text>￥{{dismoney}}</text>
+    </view>
+    <!-- 运费 -->
+    <view class='last-item-line' wx:if="{{false}}">
+      <text>运费：</text>
+      <text>包邮</text>
+    </view>
+
+
+  </view>
+
+
+ <!-- 支付方式 -->
+    <view class='hah'>
+      <view class='box3'>
+        <view class='item_line'>
+          <text>支付方式：</text>
+          <view  style='width:300rpx'></view>
+          <text bindtap='changepay'>{{paytype}}</text>
+          <image style='width:15rpx;height:20rpx' src='/imgs/mine/right.png'></image>
+        </view>
+      </view>
+      <view class='paybox' wx:if='{{paybox}}'>
+        <view class='payfangshi' wx:for='{{pay}}' wx:key=''  data-item='{{item}}' data-index='{{index}}' bindtap='selectpay'>
+          <icon wx:if='{{item.id==paystatus}}'  type="success" color="rgba(234,149,66,1)" size="16"  />
+          <icon wx:if='{{item.id!=paystatus}}'  type="success" color="rgba(234,149,66,0.2)" size="16"  />
+          <text style='color:#5c5c5c'>{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+      <!-- 支付方式 -->
+    <view class='box3' wx:if='{{paystatus==1 || paystatus==2}}'>
+      <view class='item_line'>
+        <view class='min' >最低消费:  <text style='color:#f5cb64'>{{ninimum}}</text></view>
+      </view>
+    </view>
+  
+ 
+
+  <!-- 实付款+按钮 -->
+  <view class='box4'>
+    <view class='pay_line'>
+      <text>实付款：￥{{dismoney}}</text>
+      <view class='order-pay-btn' bindtap='topay'>
+        <text>立即支付</text>
+      </view>
+    </view>
+  </view>
+
+</view>

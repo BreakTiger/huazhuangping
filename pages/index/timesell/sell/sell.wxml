@@ -1,0 +1,43 @@
+
+
+<!-- 整体容器 -->
+
+<view class='all-container'>
+  <!-- 商品列表 -->
+  <view class='pro-lists' >
+
+    <block wx:for='{{list}}' wx:key='d'>
+      <view class='content'>
+        <!-- 图片 -->
+        <image src='{{item.url}}' class='goodsimg'></image>
+        <!-- 信息 -->
+        <view class='info-box'>
+          <!-- 名字 -->
+          <view class='goodsname'>
+            {{item.name}}
+          </view>
+          <!-- 进度条 -->
+          <!-- <progress class='pro-box' percent='{{item.progress}}' color='#b80106' backgroundColor='#db8082' /> -->
+          <!-- 已购买 --> 
+          <!-- 价格 -->
+          <view class='fl-betw' style='padding-right:30rpx'>
+            <text class='price '>￥{{item.price}}</text>
+            <text class='price '>X{{item.number}}</text>
+          </view>
+          
+        </view>
+      </view>
+    </block>
+
+  </view>
+  <view wx:if='{{rab}}' class='gift' wx:key='ds'>赠品: </view>
+  <view wx:if='{{rab}}' class='giftbox' wx:for='{{gift}}' wx:key='ds' style='background:#e9e9e9'>
+     <view class='contenttwo' >
+        <text>{{item.name}}</text>
+        <text>X {{item.number}}</text>
+     </view>
+  </view>
+  <!-- 悬浮按钮 -->
+  <view wx:if='{{rab}}' class='btn-icon' bindtap='robgoods'>抢</view>
+
+</view>

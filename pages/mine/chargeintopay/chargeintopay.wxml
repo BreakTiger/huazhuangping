@@ -1,0 +1,55 @@
+<view>
+  <view class='recharge-container'>
+    <!-- 当前余额 -->
+    <view class='recharge-residue'>
+      <view class='residue-box'>
+        <view class='residue-title'>当前余额 （元）</view>
+        <view class='residue-monery flexca acl'>
+          <text>{{yue.yue}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 充值卡片 -->
+    <view class='recharge-monery'>
+      <view style='padding-left:24rpx;color:#333333'>
+        <text>充值金额</text>
+      </view>
+      <view class='monery-detail-box'>
+        <view class='monery-detail'>
+          <block wx:key="recharge" wx:for="{{recharge}}" wx:for-index="index">
+            <!-- 绑定焦点函数rechargeActive -->
+            <view class="monery-text {{active==index?'active':''}} flexca" data-index='{{index}}' data-item="{{item}}" bindtap='rechargeActive'>
+
+              <view>
+                <view>
+                <text>{{item}}</text>
+              </view>
+              <view>
+                <!-- <text class='acl' style='font-size:24rpx;'>送{{item.integral}}元</text> -->
+              </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <!-- 充值方式 -->
+    <view class='recharge-way'>
+      <view>支付方式</view>
+      <view class='way-detail'>
+        <text>微信支付</text>
+        <icon type="success" size="20" color="#B80106" />
+      </view>
+    </view>
+    <!-- 提交按钮 -->
+    <view class='recharge-quick'>
+      <view class='quick-top'>
+        <view bindtap='seletPay' class='abl'>立即充值</view>
+      </view>
+      <view class='quick-bottom'>
+        点击立即充值，即表示您已同意
+        <text bindtap='bannerInto' class='bcl'>《充值活动协议》</text>
+      </view>
+    </view>
+  </view>
+</view>

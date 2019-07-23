@@ -1,0 +1,112 @@
+<import src="/template/lunbo/lunbo.wxml" />
+<view class='banner'>
+  <swiper autoplay="true" circular="true" indicator-dots="true" indicator-color="rgba(255,255,255, 0.3)" indicator-active-color="#B80106">
+    <block wx:for="{{banner}}" wx:key="banner">
+      <swiper-item>
+        <image src="{{item}}" class="slideImage" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!--商品详情介绍  -->
+<view class='goodsticket'>
+  <view class='goodsbox'>
+    <view class='onefloor'>
+      <view class='price'>￥{{info.price}}</view>
+      <!-- <view class='past'>￥196</view> -->
+      <!-- <view class='endtime'>此商品将于2018.06.08.10点结束秒杀</view> -->
+    </view>
+    <view class='twofloor'>{{info.name}}</view>
+    <view class='threefloor'>
+      <view class='sales'>销量：{{info.buy_num}}</view>
+      <view class='inventory'>库存：{{info.kucun}}</view>
+    </view>
+    <view class='fourfloor'>
+      <view class='gifts'>赠品</view>
+      <view class='ssab'>
+        <view wx:for='{{info.gift}}' wx:key="gift">
+          <view>{{item.name}} 满{{item.man}} {{item.desc}}</view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
+<!--商品介绍图  -->
+<view class='detailimg'>
+  <view class='infotitle'>商品介绍</view>
+  <view class='imgbox' wx:for='{{detailimg}}' wx:key='f'>
+    <image src='{{item}}' mode='widthFix'></image>
+  </view>
+</view>
+<!-- 四，底部按钮 -->
+<view class='content-btn flex'>
+  <view class='btn-left flex'>
+    <view class='homeback' bindtap='homeBack'>
+      <view class='btn-img'>
+        <image class='image-full' src='/imgs/index/tab_n_1.png'></image>
+      </view>
+      <view>首页</view>
+    </view>
+    <view class='shopcar' bindtap='shopcarBack'>
+      <view class='btn-img'>
+        <image class='image-full' src='/imgs/index/car.png'></image>
+      </view>
+      <view>购物车</view>
+    </view>
+  </view>
+
+  <view class='btn-right flex'>
+    <view class='btn-right-1 flexca' data-my='1' bindtap="setModalStatus" data-status="1">加入购物车</view>
+    <view class='btn-right-2 flexca' data-my='2' bindtap="setModalStatus" data-status="1">立即购买</view>
+  </view>
+</view>
+
+
+<!-- 点击立即抢拼弹出框 -->
+<view class='add-rob' wx:if="{{showModalStatus}}" data-status="0" bindtap="setModalStatus"></view>
+
+<view class='rob-box' wx:if="{{showModalStatus}}">
+  <!-- 待添加商品详情  -->
+  <view class='close' bindtap="setModalStatus" data-status="0">
+    <image src='/imgs/mine/course.png'></image>
+  </view>
+  <view class="shade-shop-detail">
+    <view class="detail-left">
+      <view class="detail-left-img">
+        <image mode="widthFix" src="{{info.wurl}}" />
+      </view>
+      <view class="detail-left-text">
+
+        <view style='color:#B80106;margin-bottom:5rpx'>
+          ￥{{info.price}}
+        </view>
+
+        <view class='f24 mt10 acl6 d000'>库存：{{info.kucun}}</view>
+        <view class='f24 mt10 acl6 d000'>已选：{{info.name}}</view>
+      </view>
+    </view>
+
+    <!-- 购买弹出框的关闭及商品数量 -->
+    <view class="detail-right flexb">
+      <view class='detail-title-de'>
+        <text class=' f24 acl9'>数量</text>
+      </view>
+      <!-- 加减  -->
+      <view class="stepper">
+        <!-- 减号 -->
+        <text class="{{minusStatuses?'disabled':''}}" disabled="true" data-idx="{{idx}}" data-index="{{index}}" bindtap="bindMinus">-</text>
+        <!-- 数值 -->
+        <input maxlength='5' type='number' class="numberin" value='{{detailDatas.num}}' bindinput="bindChange" />
+        <!-- 加号 -->
+        <text class="normal" data-idx="{{idx}}" data-index="{{index}}" bindtap="bindPlus">+</text>
+      </view>
+    </view>
+  </view>
+  <!-- 加入和下一步按钮控制函数  -->
+  <view class="shade-shop-button">
+    <view wx:if="{{myBtn==1?'true':''}}" class="button-add abl" data-cid='detailDatas.id' data-num='{{detailDatas.num}}' bindtap='addShopcar'>加入购物车</view>
+    <view wx:if="{{myBtn==1?'':'true'}}" class="button-add abl" data-cid='detailDatas.id' data-num='{{detailDatas.num}}' bindtap='tobuy'>立即支付</view>
+  </view>
+
+</view>

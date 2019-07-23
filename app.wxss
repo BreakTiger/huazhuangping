@@ -1,0 +1,154 @@
+page {
+  background: #f7f7f7;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexca {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.acl6{
+  color: #666
+}
+.image-full {
+  width: 100%;
+  height: 100%;
+}
+.mt10{
+  margin-top: 10rpx
+}
+.f24{
+  font-size: 24rpx
+}
+.fel {
+  display: flex;
+  flex-direction: row;
+}
+
+.fl-betw {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fl-arnd {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.fl-star {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.fl-clom {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-full {
+  width: 100%;
+  height: 100%;
+}
+
+.img-w {
+  width: 100%;
+}
+
+.f30 {
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
+
+.f26 {
+  font-size: 26rpx;
+}
+
+.flexa {
+  display: flex;
+  align-items: center;
+}
+
+.flexba {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexb{
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+}
+
+.ml15 {
+  margin-left: 15rpx;
+}
+
+.fle-right {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.f34 {
+  font-size: 34rpx;
+  line-height: 34rpx;
+}
+.fle-wrap{
+  display: flex;
+  direction: row;
+  flex-wrap: wrap;
+  
+}
+/* 第三方插件 */
+
+/* 有赞-多选按钮 */
+
+@font-face {
+  font-family: 'zuiicon';
+  src: url('https://b.yzcdn.cn/zui/font/zuiicon-b37948cf5d.eot');
+  src: url('https://b.yzcdn.cn/zui/font/zuiicon-b37948cf5d.eot?#iefix') format('embedded-opentype'),
+         url('https://b.yzcdn.cn/zui/font/zuiicon-b37948cf5d.woff2') format('woff2'),
+         url('https://b.yzcdn.cn/zui/font/zuiicon-b37948cf5d.woff') format('woff'),
+         url('https://b.yzcdn.cn/zui/font/zuiicon-b37948cf5d.ttf') format('truetype');
+}
+
+.zan-icon {
+  display: inline-block;
+}
+
+.zan-icon::before {
+  font-family: "zuiicon" !important;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric *//* remove if not needed *//* margin-left: .2em; *//* you can be more comfortable with increased icons size *//* font-size: 120%; *//* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect *//* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.zan-icon-check:before {
+  content: '\e804';
+  color: #8c8c8c;
+}
+
+.zan-icon-checked:before {
+  content: '\e805';
+  color: #ef9ba8;
+}

@@ -1,0 +1,44 @@
+<!-- 搜索页面 -->
+
+<view class='container'>
+
+  <!-- 搜索框 -->
+  <form report-submit='true' bindsubmit='onSearchTap'>
+    <view class='header'>
+      <!-- 搜索容器：加上背景色的框 横向排布 -->
+
+      <view class='search_box'>
+        <!-- 图标 -->
+        <icon type="search" size="15" color="#666666" />
+        <!-- 输入框 -->
+        <input name="keyword" placeholder='请输入搜索内容'></input>
+      </view>
+      <button class='s_btn' form-type='submit'>搜索</button>
+    </view>
+
+  </form>
+
+  <!-- 热门搜索 -->
+   <view class='hot_search' wx:if='{{list.length==0}}'>
+    
+  </view> 
+
+  <!-- 对应的商品列表 -->
+  <view class='search_list' wx:if='{{list.length>0}}'>
+
+    <!-- 存在内容显示的内容 -->
+    <block wx:for='{{list}}' wx:key='s'>
+      <view class='list-item' data-item='{{item}}' bindtap='todetail'>
+        <image src='{{item.wurl}}' class='item-img' mode='widthFix' ></image>
+        <text class='item-name'>{{item.name}}</text>
+        <view class='price-numbers'>
+          <text class='item-price'>￥{{item.price}}</text>
+          <text class='item-sellnumbers'>销量：{{item.goodnum}}</text>
+        </view>
+      </view>
+    </block>
+
+  </view>
+
+
+</view>

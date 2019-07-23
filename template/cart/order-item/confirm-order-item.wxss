@@ -1,0 +1,61 @@
+.message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding-top: 20rpx;
+   box-sizing: border-box; 
+   padding-left: 20rpx;
+   background: #fff;
+  /* border-top: 1rpx solid #cecccc; */
+}
+
+.message_img {
+  width: 181rpx;
+  height: 197rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+}
+
+/* 单个详细容器 */
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 字体大小 */
+
+.info-box text {
+  font-size: 30rpx;
+}
+
+/* 商品名 */
+
+.goodsname {
+  width: 450rpx;
+  display: block;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+/* 规格 */
+
+.guige {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 25rpx;
+}
+
+.price-number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-number text {
+  color: #b90308;
+}

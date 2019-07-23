@@ -1,0 +1,69 @@
+<view class='imgbox'>
+  <image src='/imgs/mine/header.png'></image>
+</view>
+<view class='topnav fl-arnd'>
+  <view wx:for='{{nav}}' wx:key='dd' class="bar {{index==navindex?'red':''}}" data-index='{{index}}' bindtap='navbar'>
+    <view>{{item}}</view>
+    <view class="{{index==navindex?'redbg':''}}"></view>
+  </view>
+</view>
+<!--注册  -->
+<form bindsubmit='tosubmit' wx:if='{{navindex==0}}'>
+  <view class='classes fel'>
+    <view class='fenlei'>手机号</view>
+    <view class='fill'>
+      <input name="phone" type='number' bindinput='blurPhone' placeholder-style='color:#BCBCBC' placeholder="请输入手机号" value='{{info.phone}}' />
+    </view>
+  </view>
+  <view class='classes fel'>
+    <view class='fenlei'>密码</view>
+    <view class='fill'>
+      <input name="password" type='password' placeholder-style='color:#BCBCBC' placeholder="请输入您的密码" value='{{info.password}}' />
+    </view>
+  </view>
+  <view class='classes fel'>
+    <view class='fenlei'>姓名</view>
+    <view class='fill'>
+      <input name="name" placeholder-style='color:#BCBCBC' placeholder="请输入您的姓名" value='{{info.name}}' />
+    </view>
+  </view>
+  <view class='classes fel'>
+    <view class='fenlei'>店铺名称</view>
+    <view class='fill'>
+      <input name="dpname" placeholder-style='color:#BCBCBC' placeholder="请输入您的店铺名称" value='{{info.dpname}}' />
+    </view>
+  </view>
+  <view class='classes fel'>
+    <view class='fenlei'>地址</view>
+    <view class='fill'>
+      <input name="address" placeholder-style='color:#BCBCBC' placeholder="请输入您的地址" value='{{info.address}}' />
+    </view>
+  </view>
+  <view class='check'>
+    <view class='title'>选择经营品牌(只能选一个哦）</view>
+    <view class='fl-star'>
+      <view class='chose fl-betw' wx:for='{{list}}' wx:key='d' data-index='{{index}}' data-item='{{item}}' bindtap='changetab'>
+        <view class="box {{index==curindex?'bg':''}}"></view>
+        <view class="ziti {{index==curindex?'red':''}}">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <button class='btn' formType="submit">注册提交</button>
+</form>
+<!--登录  -->
+<form bindsubmit='tologin' wx:if='{{navindex==1}}'>
+  <view class='classes fel'>
+    <view class='fenlei'>手机号</view>
+    <view class='fill'>
+      <input name="phone" type='number' bindinput='blurPhone' placeholder-style='color:#BCBCBC' placeholder="请输入手机号" value='{{info.phone}}' />
+    </view>
+  </view>
+  <view class='classes fel'>
+    <view class='fenlei'>密码</view>
+    <view class='fill'>
+      <input name="password" type='password' placeholder-style='color:#BCBCBC' placeholder="请输入您的密码" value='{{info.password}}' />
+    </view>
+  </view>
+  <button class='btn' formType="submit">登录</button>
+</form>

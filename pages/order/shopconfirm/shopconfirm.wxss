@@ -1,0 +1,265 @@
+/* 引入模版的样式 */
+
+/* 收货地址的样式 */
+@import "/template/address/item/address-item-template.wxss";
+
+/* 商品信息的样式 */
+@import "/template/cart/order-item/confirm-order-item.wxss";
+
+page {
+  background-color: #f7f6f2;
+}
+
+/* 整体容器 */
+
+.all-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 140rpx
+}
+
+/* 顶部颜色圆角框 */
+
+.BCV {
+  width: 750rpx;
+  height: 80rpx;
+  background-color: #b90308;
+  border-radius: 0rpx 0rpx 20rpx 20rpx;
+}
+
+/* 内容盒子 */
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 收货地址+购买的物品 */
+
+.box1 {
+  width: 702rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1rpx solid #333; */
+  margin-top: -78rpx;
+}
+
+/* 商品列表 */
+
+.lists-box {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 支付配送+商品金额+运费 */
+
+.box2 {
+  width: 702rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 21rpx;
+  border-radius: 20rpx;
+}
+
+.item-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20rpx 20rpx 10rpx 20rpx;
+  border-bottom: 1rpx solid #cecccc;
+  padding-bottom: 20rpx;
+}
+
+.last-item-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10rpx 20rpx 10rpx 20rpx;
+  padding-bottom: 10rpx;
+}
+
+.last-item-line text {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.item-line text {
+  font-size: 30rpx;
+  color: #333;
+}
+
+/* 支付方式 */
+
+.box3 {
+  width: 702rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  position: relative;
+  height: 80rpx;
+  line-height: 80rpx
+}
+
+.item_line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20rpx;
+  justify-content: space-between;
+ 
+}
+
+.item_line text {
+  font-size: 30rpx;
+  color: #333;
+}
+
+
+/* 实付款+按钮 */
+.box4{
+  width: 702rpx;
+  background-color: #fff;
+  margin-top: 21rpx;
+  border-radius: 15rpx;
+  z-index: 1000;
+  margin: auto
+}
+
+.pay_line{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10rpx;
+  justify-content: space-between;
+  height: 90rpx;
+  z-index: 11
+}
+
+.pay_line text{
+  font-size: 28rpx;
+  color: #333;
+}
+.min{
+  width: 500rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+   color: #333;
+   line-height: 50rpx
+}
+.order-pay-btn{
+  height: 60rpx;
+  width: 200rpx;
+  border-radius: 10rpx;
+  background-color: #f5cb64;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  margin-right:15rpx;
+ z-index: 2
+}
+
+.order-pay-btn text{
+  font-size: 34rpx;
+  color: #fff;
+}
+/*商品  */
+.message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #cecccc;
+}
+
+.message_img {
+  width: 181rpx;
+  height: 197rpx;
+  margin-right: 20rpx;
+}
+
+/* 单个详细容器 */
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 字体大小 */
+
+.info-box text {
+  font-size: 30rpx;
+}
+
+/* 商品名 */
+
+.goodsname {
+  width: 450rpx;
+  display: block;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+/* 规格 */
+
+.guige {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 25rpx;
+}
+
+.price-number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-number text {
+  color: #b90308;
+}
+.paybox{
+  width: 200rpx;
+  height: 200rpx;
+  background: #fff;
+  position: absolute;
+  top: 100rpx;
+  right: 10rpx;
+  z-index: 1
+}
+.payfangshi{
+  width: 100%;
+  height:auto;
+  padding: 10rpx 0rpx;
+  font-size: 28rpx;
+  color: #666
+}
+.payfangshi icon{
+  margin: 8rpx 15rpx
+}
+.hah{
+  position: relative;
+   margin: 21rpx 0rpx;
+}
+.box4bg{
+  width: 100%;
+  height: 120rpx;
+  background: #f7f7f7;
+  /* border: 1rpx sienna solid; */
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  /* box-sizing: border-box; */
+  padding-top: 10rpx
+}

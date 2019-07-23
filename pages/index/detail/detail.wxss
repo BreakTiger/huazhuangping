@@ -1,0 +1,399 @@
+@import "/template/lunbo/lunbo.wxss";
+page{
+  background: #f7f7f7
+}
+.banner{
+  width: 100%;
+  height: auto;
+}
+/*商品介绍  */
+.goodsticket{
+  width: 100%;
+  height: 220rpx;
+  position: relative
+}
+.goodsbox{
+  position: absolute;
+  width: 95%;
+  height: 320rpx;
+  left: 20rpx;
+  top: -100rpx;
+  margin: auto;
+  /* box-shadow: 0rpx 0rpx 100rpx 10rpx #ccc; */
+  background: #fff;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  padding: 20rpx
+}
+.onefloor{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 32rpx;
+  color: #B80106;
+  line-height: 60rpx;
+}
+.price{
+  width: 150rpx;
+   /* border: 1rpx sienna solid */
+   
+}
+.past{
+  width: 130rpx;
+  line-height: 60rpx;
+  color: #ccc;
+  font-size: 26rpx;
+  text-decoration: line-through;
+  /* border: 1rpx sienna solid */
+}
+.endtime{
+  width: 100%;
+  font-size: 24rpx;
+  /* border: 1rpx sienna solid */
+}
+.twofloor{
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  font-size: 30rpx;
+  color: #333;
+  margin-top: 15rpx
+}
+.threefloor{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color:#666;
+  font-size: 28rpx;
+  margin-top: 20rpx
+}
+.sales{
+  width: 200rpx;
+}
+.inventory{
+  width: 200rpx;
+  text-align: right
+}
+.fourfloor{
+  width: 100%;
+  height: 40rpx;
+  color: #B80106;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start
+
+}
+.gifts{
+  width: 80rpx;
+  padding: 5rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  border: 1rpx solid #B80106;
+  border-radius: 10rpx;
+  text-align: center;
+  margin-right: 20rpx
+}
+
+.ssab{
+  display: flex;
+  flex-direction: column;
+}
+/*商品介绍图  */
+.detailimg{
+  margin-bottom: 110rpx
+}
+.infotitle{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  color: #333;
+  margin-top: 30rpx;
+  text-align: center
+}
+.imgbox{
+  width: 100%;
+  height: auto
+}
+.imgbox image{
+  width: 100%
+}
+/* 四，底部按钮  */
+  .content-btn{
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1rpx solid #ddd;
+} 
+.btn-left{
+  width: 40%;
+  font-size: 20rpx;
+  color: #999999;
+}
+
+.btn-left>view{
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.homeback{
+  margin-left: 12%;
+}
+.shopcar{
+  margin-left: 6%;
+}
+
+.btn-right{
+  flex: 1;
+  font-size: 30rpx;
+}
+.btn-right>view{
+  width: 50%;
+}
+.btn-right-1{
+  background-color: rgb(205,77,80);
+  color: white;
+}
+.btn-right-2{
+  background-color: #B80106;
+  color: white;
+}
+.btn-img{
+  width:50rpx;
+  height: 50rpx;
+} 
+
+/*添加购物车详情  */
+/* 点击加入购物车弹出框  */
+.add-rob{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+.rob-box{
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.merch-stepper-symbol{
+  width: 48rpx;
+  height: 48rpx;
+  background-color: white;
+  border-radius: 8rpx;
+}
+.merch-stepper .nownum{
+  width: 50rpx;
+  text-align: center;
+  margin: 0 20rpx;
+}
+
+
+
+/* 加入和结算按钮 */
+.button-addto,.button-accountto{
+  height: 100rpx;
+  color: white;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 32rpx;
+}
+.button-addto{
+  background-color: #e5c41d;
+}
+.button-accountto{
+  background-color: #ff3300;
+}
+.nav-nav{
+  display: flex;
+}
+.nav-nav>view{
+  width: 50%;
+  background: white;
+}
+.nav-left,.nav-right{
+   text-align: center;
+}
+.nav-left>view,.nav-right>view{
+   width: 45rpx;
+   height: 45rpx;
+   margin: 0 auto;
+   margin-top: 15rpx;
+}
+.nav-left>view image, .nav-right>view image{
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+.nav-left text,.nav-right text{
+  display: block;
+  margin-top: -30rpx;
+  font-size: 20rpx;
+}
+/* 加入购物车************************************************************************ */
+/*点击购买弹出购买框 遮照购买层 */
+.shade{
+  width: 100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+}
+.shade-shop{
+  width: 100%;
+  height: 290rpx;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+/* 待添加商品详情 */
+.shade-shop-detail{
+  padding: 20rpx 24rpx 40rpx;
+}
+/* 左侧详情 */
+.detail-left{
+  display: flex;
+  flex: 1;
+}
+.detail-left-img{
+  width: 200rpx;
+  height: 200rpx;
+  border:5rpx solid #ffffff;
+  border-radius: 12rpx;
+  position: relative;
+  top: -60rpx;
+  left: 0rpx;
+  background-color: white;
+  box-shadow: 2rpx 2rpx 3rpx 1rpx rgba(150,150,150,0.1);
+  overflow: hidden;
+}
+.detail-left-img image{
+  width: 100%;
+  height: 100%;
+}
+.detail-left-text{
+  width: 518rpx;
+  margin-left: 20rpx;
+}
+.detail-left-text view:nth-child(1){
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+/*关闭弹窗按钮  */
+.close{
+  position:absolute;
+  width: 30rpx;
+  height: 30rpx;
+  top: 30rpx;
+  right:30rpx;
+  /* border: 1rpx saddlebrown solid */
+}
+.close image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.detail-mid .mid-list{
+  margin: 20rpx 0 40rpx;
+}
+.detail-mid .m-l-item{
+  padding: 15rpx 20rpx;
+  font-size: 24rpx;
+  background-color: #e7e7e7;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx
+}
+.detail-mid  .zhuangactive{
+  background-color: #B80106;
+  color: #fff;
+}
+/* 关闭及加减 */
+
+.detail-title-de{
+  font-size: 30rpx;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+/* 右侧增加减少 */
+/* 计算加减 */
+.stepper{
+  display: flex;
+  border-radius: 5px;
+  text-align: center;
+}
+.stepper text{
+  display: block;
+  width: 50rpx;
+  height: 52rpx;
+  background-color:#F7F7F7 ;
+  /* border:1px solid #999999; */
+  line-height: 50rpx;
+  /* color: #666666; */
+}
+.stepper input{
+  display: block;
+  width: 100rpx;
+  height: 50rpx;
+  /* border:1px solid transparent; */
+  margin: 0 5rpx;
+  line-height: 50rpx;
+  color: #333333;
+   font-size: 28rpx;
+   text-align: center;
+   background-color: #f7f7f7;
+}
+/* .stepper wx-input.numberin{
+  width: 120rpx;
+} */
+.stepper text:first-child{
+  border-right: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.stepper text:last-child{
+  border-left: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* 减号禁用样式 */
+.stepper .disabled{
+  border-color: rgba(153,153,153,0.2)
+}
+.shade-shop-button{
+  width: 100%;
+  height: 100rpx
+}
+.button-add{
+  width: 90%;
+  height: 80rpx;
+  color: white;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  background: #B80106;
+  margin: auto;
+  border-radius: 10rpx
+}

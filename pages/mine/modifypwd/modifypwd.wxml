@@ -1,0 +1,17 @@
+<view>
+  <form bindsubmit='tosubmit'>
+    <view class='classes fel'>
+      <view class='fenlei'>旧密码</view>
+      <view class='fill'>
+        <input name="old_password" type='password' placeholder-style='color:#BCBCBC' placeholder="请输入您的旧密码" value='' />
+      </view>
+    </view>
+    <view class='classes fel'>
+      <view class='fenlei'>新密码</view>
+      <view class='fill'>
+        <input name="new_password" type='password' placeholder-style='color:#BCBCBC' placeholder="请输入您的新密码" value='' />
+      </view>
+    </view>
+    <button class='btn' formType="submit">修改密码</button>
+  </form>
+</view>

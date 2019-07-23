@@ -1,0 +1,150 @@
+page {
+  background-color: #fff;
+}
+
+/* 整体容器 */
+
+.container {
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 头部 */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-bottom: 38rpx;
+  margin-left: 18rpx;
+}
+
+/* 搜索框盒子：图片加输入框 */
+
+.search_box {
+  width: 570rpx;
+  height: 55rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f7f6f2;
+  border-radius: 20rpx;
+}
+
+/* 图标 */
+
+icon {
+  margin-left: 20rpx;
+}
+
+/* 输入框 */
+
+input {
+  width: 470rpx;
+  font-size: 30rpx;
+  padding-left: 10rpx;
+}
+
+/* 搜索按钮 */
+
+.s_btn {
+  font-size: 30rpx;
+  color: #666;
+  margin-left: 18rpx;
+  line-height: 25px;
+  width: 130rpx;
+}
+
+/* 热门搜索 */
+
+.hot_search {
+  display: flex;
+  flex-direction: column;
+  padding-left: 70rpx;
+}
+
+/* 标题 */
+
+.title {
+  font-size: 30rpx;
+  margin-top: 38rpx;
+  margin-bottom: 37rpx;
+}
+
+/* 标题 */
+
+.lable_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lable {
+  /* 边框 */
+  border: 3rpx solid #666;
+  border-radius: 10rpx;
+  /* 外部边距 */
+  margin-right: 75rpx;
+  margin-bottom: 40rpx;
+  /* 文字 */
+  font-size: 30rpx;
+  color: #666;
+  /* 内部边距 */
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  padding-top: 14rpx;
+  padding-bottom: 14rpx;
+}
+
+/* 搜索结果列表 */
+
+.search_list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 44rpx;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 24rpx;
+  margin-bottom: 49rpx;
+}
+
+.item-img {
+  width: 320rpx;
+  height: 426rpx;
+  border-radius: 10rpx;
+}
+
+.item-name {
+  width: 201rpx;
+  height: 35rpx;
+  text-align: center;
+  color: #666;
+  margin-top: 22rpx;
+  margin-bottom: 22rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.price-numbers{
+  width: 280rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-numbers text{
+  font-size: 28rpx;
+  color: #333;
+}
+
+.price-numbers .item-price{
+  color: #b80106;
+}

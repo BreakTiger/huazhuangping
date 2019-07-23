@@ -1,0 +1,10 @@
+<!-- 物流信息 -->
+
+<view class='wuliu'>
+  <block wx:for="{{datalist}}" wx:key="unique">
+    <view class='wuliu-item'>
+      <view class='wuliu-date'>{{item.time}}</view>
+      <view class='wuliu-text'>{{item.context}}</view>
+    </view>
+  </block>
+</view>

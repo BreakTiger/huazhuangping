@@ -1,0 +1,45 @@
+<!-- 首页 -->
+
+ <import src="/template/lunbo/lunbo.wxml" /> 
+ <import src="/template/scrollImg/scrollImg.wxml" />
+<!--搜索框  -->
+<view class='topsearchbox'>
+  <view class='in-inputs' bindtap='toSelect'>
+      <icon type="search" size="15" color="#666666" />
+      <text style='padding:2rpx 0 0 20rpx;color: #bbbbbb;font-size: 28rpx;'>搜索你喜欢的产品</text>
+  </view>
+</view>
+<!--轮播图  -->
+<view class='banner'>
+    <template is="lunbo" data="{{banner,circular}}" />
+</view>
+<!--限时秒杀  -->
+<view style='margin-top: 30rpx; background-color: #fff;width: 100%;'>
+  <template is="scrollImg" data="{{perorders}}" />
+</view>
+<!--全部产品 -->
+<view class='allgoods'>
+  <view class='pre-title'>
+    <view class='pre-contain'>
+      <view class='pre-left'>
+        <view class='bigword'>全部产品</view>
+      </view>
+      <view class='pre-right'>
+      </view>
+    </view>
+        <view class='pre-enter'>
+        <view class='pre-en' style='margin-top: 20rpx;'>更多产品等您选,做一个精致的猪猪女孩</view>
+        <view class='pre-ter' bindtap='watchmore'>
+            查看更多
+            <image src="../../imgs/temlate/btn_more@2x.png" style="width: 10rpx;height: 20rpx;"></image>
+          </view>
+      </view>
+  </view>
+  <view class='allbox'>
+     <view class='one' wx:for='{{allgoods}}' wx:key='s' data-item='{{item}}' bindtap='todetail'>
+        <image src='{{item.wurl}}'></image>
+        <view class='i1'>{{item.name}}</view>
+        <view class='i2'>￥{{item.price}}</view>
+     </view>
+  </view>
+</view>

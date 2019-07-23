@@ -1,0 +1,115 @@
+<!-- 头部 -->
+  <view class='share-top'>
+    <view class='st-top'>
+      <view class='top-img'>
+        <image mode='widthFix' class='img-w' src='/imgs/mine/fxbg.png'></image>
+        <view class='top-text'>
+          <view class='text-color f30'>我的佣金 (元)</view>
+          <view class='text-monery flexca'>
+            <text>{{user.extract}}</text>
+          </view>
+          <view class='flexca'>
+           
+            
+          </view>
+          <view class='fle-right'>
+            <view class='fl-arnd' style='width:150rpx' bindtap='myShare'>
+              <text class='f26'>我的分销</text>
+              <view class='text-r-img ml15'>
+                <image mode='widthFix' class='img-w' src='/imgs/mine/right2.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='st-title flex'>
+      <view class="title-only flexa {{shareId==0?'activeti':''}}" data-shareid='0' bindtap='shareFn'>
+        <view class='only-box flexca'>
+          <view class='o-b-img mr20'>
+            <image style="{{shareId==0?'':'display:none'}}" mode='widthFix' class='img-w' src='/imgs/mine/fx1.png'></image>
+            <image style="{{shareId==1?'':'display:none'}}" mode='widthFix' class='img-w' src='/imgs/mine/fx2.png'></image>
+          </view>
+          <text class='f36 '>佣金明细</text>
+        </view>
+      </view>
+      <view class="title-only flexa {{shareId==1?'activeti':''}}" data-shareid='1' bindtap='shareFn'>
+        <view class='only-box flexca'>
+          <view class='o-b-img mr20'>
+            <image style="{{shareId==1?'':'display:none'}}" mode='widthFix' class='img-w' src='/imgs/mine/fx3.png'></image>
+            <image style="{{shareId==0?'':'display:none'}}" mode='widthFix' class='img-w' src='/imgs/mine/fx4.png'></image>
+          </view>
+          <text class='f36 '>提现明细</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 列表 -->
+  <view wx:if="{{shareId==0}}" class='share-list'>
+     <block wx:key="list1" wx:for="{{list1}}"> 
+    
+      <view class='list-item'>
+        <view class='item-title flexba'>
+           <view class='item-t-l f26'>
+            返现编号：{{item.ordernumber}}
+          </view> 
+          <view class='item-t-r'>
+            <text class='acl f26'>已返现</text>
+          </view>
+        </view>
+        <view class='item-content flexba'>
+          <view class='content-lf flex'>
+             <view class='c-l-img mr20'>
+              <image mode='widthFix' class='img-w' src='{{item.userimage}}'></image>
+            </view> 
+            <view class='c-l-text flexa' style='margin-left:20rpx'>
+              <view>
+                 <view class='f26'>
+                  {{item.username}}
+                </view> 
+                 
+                 <view class='f24 acl6 mt20'>
+                  <text>返现时间： </text>
+                  <text>{{item.time}}</text>
+                </view> 
+                <view class='f24 acl6 mt20'>
+                  <text>备注： </text>
+                  <text>喵小姐是由我推荐的</text>
+                </view> 
+              </view>
+            </view>
+          </view>
+          <view class='content-rt'>
+             <text class='f30 acl'>￥{{item.money}}</text> 
+          </view>
+        </view>
+      </view>
+    </block>
+
+  </view>
+   <view wx:if="{{shareId==1}}" class='share-list'>
+    <block wx:key="list2" wx:for="{{list2}}">
+      <view class='list-item'>
+        <view class='item-content flexba'>
+          <view class='content-lf flex'>
+            <view class='c-l-text flexa'>
+              <view>
+                <view class='f30'>
+                  <text>佣金提现成功</text>
+                  <!-- <text>佣金提现申请已提交</text> -->
+                </view>
+                <view class='f24 acl6 mt20'>
+                  <text>{{item.daytime}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class='content-rt'>
+             <text class='f30 acl'>￥{{item.money}}</text> 
+             <!-- <text class='f30 acl'>￥21</text>  -->
+          </view>
+        </view>
+      </view>
+    </block>
+
+  </view>

@@ -1,0 +1,30 @@
+<!-- 地址项目模板-->
+<!--依赖：无-->
+<template name="addressItemTemplate">
+
+  <!-- 盒子 垂直排布--> 
+  <view class="address-item-container" catchtap="onAddressTap">
+
+
+    
+    <view class='address-info-container'>
+
+      <!-- 名字+联系方式+图标 -->
+      <view class='address-name-phone-container'>
+        <text>收货人姓名：{{user.name}}</text>
+        <view class='phone-icon'>
+          <text class='address-info-phone'>联系方式：{{user.phone}}</text>
+        </view>
+      </view>
+
+      <!-- 收货地址 -->
+      <view class='address-detail-container'>
+        <text>收货地址：</text>
+        <text class='address-data'>{{user.address}}</text>
+      </view>
+
+    </view>
+
+  </view>
+
+</template>

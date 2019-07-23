@@ -1,0 +1,36 @@
+.classes {
+  width: 90%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: auto;
+  border-bottom: 1rpx solid #bcbcbc;
+  font-size: 28rpx;
+}
+
+.fenlei {
+  width: 30%;
+  padding-left: 10rpx;
+  color: #666;
+}
+
+input {
+  width: 400rpx;
+  color: #333;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+
+button::after {
+  display: none;
+}
+
+.btn {
+  width: 500rpx;
+  height: 60rpx;
+  border: 1rpx solid #b80106;
+  border-radius: 10rpx;
+  line-height: 50rpx;
+  color: #b80106;
+  font-size: 30rpx;
+  margin-top: 50rpx;
+}

@@ -1,0 +1,29 @@
+<template name="scrollImg">
+  <view class='perorder'>
+    <view class='pre-title'>
+      <view class='pre-contain'>
+        <view class='pre-left'>
+          <view class='bigword'>限时秒杀</view>
+        </view>
+        <view class='pre-right'>
+        </view>
+      </view>
+         <view class='pre-enter'>
+          <view class='pre-en' style='margin-top: 20rpx;'>你想要的大牌都在这</view>
+          <view class='pre-ter' bindtap='watchmoresell'>
+              <!-- 查看更多
+              <image src="../../imgs/temlate/btn_more@2x.png" style="width: 10rpx;height: 20rpx;"></image> -->
+            </view>
+        </view>
+    </view>
+    <view class='outerbox'>
+      <scroll-view class='innerbox'  scroll-into-view='{{perorders.id}}' data-id='{{index}}' scroll-x='true' lower-threshold="100" upper-threshold="100"  scroll-with-animation="true">
+        <view class='imgitem4 imgitem' data-id='a0' scroll-x="true" bindtap='turnpreorder' data-index="{{index}}" wx:for="{{perorders}}" wx:key="perorders" data-item='{{item}}'>
+          <image src='{{item.url}}'></image>
+          <view class='i1'>{{item.goodsinfo}}</view>
+          <view class='i2'>￥{{item.price}}</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</template>

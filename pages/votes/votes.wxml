@@ -1,0 +1,43 @@
+<!-- 投票 -->
+
+<view class='container'>
+
+  <!-- 顶部公告栏 -->
+  <view class='top-info'>
+    <view class='title'>投票公告</view>
+    <text class='info'>一个人只有一次投票的机会哦</text>
+  </view>
+
+  <!-- 商品列表 -->
+  <view class='votes_list'>
+
+    <view class='lits_item' wx:for='{{voteinfo}}' wx:key='d' >
+      <!-- 图片 -->
+      <image src='{{item.url}}' class='item_img' data-item='{{item}}' mode='widthFix' bindtap='todetail'></image>
+      <!-- 信息框 -->
+      <view class='list_info' data-item='{{item}}' bindtap='todetail'>
+        <text class='name'>{{item.name}}</text>
+        <progress class='pro-box' percent='{{item.percen}}' color='#b80106' backgroundColor='#db8082' />
+        <text class='tickets'>已投{{item.vote_num}}</text>
+        <!-- 价格+投票按钮 -->
+        <view class='total-info'>
+
+          <text class='price'>￥{{item.price}}</text>
+
+          <!-- <view class='up_btn1' wx:if='{{type}}' data-types='{{item.types}}' catchtap='onVotesTap'>点击投票</view>  -->
+          
+
+        </view>
+
+      </view>
+      <view class='up_btn1' wx:if='{{item.isvote==0}}' data-item='{{item}}' data-index='{{index}}' bindtap='touticket'>点击投票</view>
+      <view class='up_btn2' wx:if='{{item.isvote==1}}' data-item='{{item}}' data-index='{{index}}' bindtap='touticket'>已投票</view>
+    </view>
+    
+
+  </view>
+
+
+
+
+</view>

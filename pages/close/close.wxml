@@ -1,0 +1,4 @@
+<view class='close'>
+  小程序暂时关闭
+</view>
+<view class='opentime'>{{beizhu}}</view>

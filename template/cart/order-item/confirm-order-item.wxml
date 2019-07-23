@@ -1,0 +1,21 @@
+<!-- 模版 -->
+<!-- 确认订单页面：产品信息 -->
+<template name="orderGoodsTemplate">
+
+  <view class='message'>
+    <!-- 图片 -->
+    <image src='{{url}}' class='message_img'></image>
+
+    <!-- 商品名字+规格+价格+数量 -->
+    <view class='info-box'>
+      <text class='goodsname'>{{name}}</text>
+      <text class='guige'>规格：{{goodcapa}}</text>
+      <view class='price-number'>
+        <text>￥{{price}}</text>
+        <text>X{{number}}</text>
+      </view>
+    </view>
+
+  </view>
+
+</template>

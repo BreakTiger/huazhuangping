@@ -1,0 +1,84 @@
+<import src="/template/cart/order-item/confirm-order-item.wxml" />
+
+
+<!-- 整体容器  0 -->
+<view class='container'>
+
+  <!-- 顶部导航 -->
+  <view class='top-tab-line'>
+    <view class='tab-list-content'>
+      <!-- 每项的内容 -->
+      <block wx:for='{{tabs}}' wx:key="value">
+        <view class="tab-list-item {{selected==item.value?'active':''}}" data-index="{{index}}" catchtap="onOrderTabTap">
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 商品订单的列表 -->
+  <view class='lists_content'>
+
+    <!-- 列表中的单项内容 -->
+    <block wx:for='{{lists}}' wx:key="list_id">
+
+      <view class='list-item'>
+
+        <!-- 首行：图标+名字+状态 -->
+        <view class='first-line'>
+          <view class='line-icon-name'>
+            <!-- <image src='/imgs/car/yuan.png' class='h-icon'></image>
+            <text>{{item.pro_name}}</text> -->
+          </view>
+          <!-- 状态 -->
+          <text class='order-type' wx:if='{{item.status==0}}'>待支付</text>
+          <text class='order-type' wx:if='{{item.status==1}}'>待发货</text>
+          <text class='order-type' wx:if='{{item.status==2}}'>待收货</text>
+          <text class='order-type' wx:if='{{item.status==3}}'>已完成</text>
+          <text class='order-type' wx:if='{{item.status==4}}'>退货中</text>
+          <text class='order-type' wx:if='{{item.status==5}}'>退货成功</text>
+        </view>
+
+        <!-- 商品信息 -->
+        <view class='pro-content'>
+          <block wx:for='{{item.goods}}' wx:key='goods_id'>
+            <template is="orderGoodsTemplate" data="{{...item, index}}" />
+          </block>
+        </view>
+
+        <!-- 汇总信息 -->
+        <view class='total-info'>
+          <text class='numbers'>共计{{item.goods.length}}件</text>
+          <text class='price'>合计：￥{{item.price}}</text>
+        </view>
+
+        <!-- 按钮 -->
+        <!-- 根据订单状态：status来判断 -->
+        <view class='order-btn'>
+
+          <!-- 待支付 -->
+          <view class='btn2' wx:if='{{item.status==0}}' data-data='{{item}}' bindtap='lijipay'>立即支付</view>
+          <view class='btn1' wx:if='{{item.status==0}}' data-id='{{item}}' bindtap='delate'>取消订单</view>
+
+          <!-- 代发货 -->
+          <view class='btn2' wx:if='{{item.status==1 && false}}' data-id='{{item}}' bindtap='tuihuo'>申请退货</view>
+          <view class='btn1' wx:if='{{item.status==1}}' data-data='{{item}}' bindtap='weak'>提醒发货</view>
+
+
+          <!-- 待收货 -->
+          <view class='btn2' wx:if='{{item.status==2}}' data-item='{{item}}' bindtap='makesure'>确认收货</view>
+          <view class='btn1' wx:if='{{item.status==2}}' data-item='{{item}}' bindtap='logistics'>
+            查看物流
+          </view>
+
+
+
+        </view>
+
+      </view>
+
+    </block>
+
+  </view>
+
+</view>

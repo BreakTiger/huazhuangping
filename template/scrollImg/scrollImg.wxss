@@ -1,0 +1,146 @@
+.perorder {
+  width: 750rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+/* 头部 */
+
+.pre-title {
+   margin: 0 24rpx; 
+  /* margin-top: 60rpx; */
+}
+
+.pre-contain {
+  height: 88rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pre-contain image {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.pre-left, .pre-right {
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+}
+.pre-enter{
+  display: flex;
+  color: #999999;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  align-items: center;
+}
+.pre-ter{
+  margin-right:30rpx;
+  position:absolute;
+  right:0rpx;
+}
+.bigword {
+  color:#b80106;
+  font-weight:bold;
+  font-size: 48rpx;
+  padding-top: 60rpx;
+}
+
+.smaword {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+
+.watchmore {
+  font-size: 30rpx;
+}
+
+/* 滚动视图区 */
+
+.outerbox {
+  height: 360rpx;
+  margin-bottom:40rpx;
+  /* overflow: hidden; */
+}
+
+/* scroll-view */
+
+.innerbox {
+  height: 400rpx;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  align-items: center;
+  position: relative;
+  margin-top: 40rpx;
+}
+
+.imgitem {
+  margin-left: 24rpx;
+  display: inline-block;
+}
+
+.imgitem image {
+  display: block;
+  width: 100%;
+}
+.imgitem4 {
+  /* width: 395rpx;
+  height: 283rpx; */
+  width:500rpx;
+  height:300rpx;
+}
+
+.imgitem6 {
+  width: 431rpx;
+  height: 283rpx;
+}
+
+.imgitem7 {
+  width: 313rpx;
+  height: 282rpx;
+}
+
+.imgitem8 {
+  width: 350rpx;
+  height: auto;
+}
+
+.innerbox image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.i1 {
+  color: #333;
+  margin-right: 15rpx;
+  height: 40rpx;
+  width: 80%;
+  margin: auto;
+  font-size:30rpx;
+  margin-top: 10rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+}
+
+.i2 {
+  color: #b80106;
+  text-align: center;
+  font-size:28rpx;
+  height: 60rpx;
+  line-height: 60rpx
+}
+
+.tc {
+  width: 100%;
+  font-size: 24rpx;
+  color: #909090;
+  text-align: center;
+  background: #ccc;
+}

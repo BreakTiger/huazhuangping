@@ -1,0 +1,21 @@
+.wuliu {
+  width: 100%;  
+}
+
+.wuliu-item {
+  padding: 0px 15px;
+  height: 35px;
+  line-height: 35px;
+  display: flex;
+}
+
+.wuliu-name {
+  width: 30%;
+  font-size: 15px;  
+}
+
+.wuliu-no {
+  width: 70%;
+  font-size: 18px;
+  color: #FF0000;
+}

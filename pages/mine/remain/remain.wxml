@@ -1,0 +1,45 @@
+<!-- 我的余额 -->
+
+<view class='container'>
+
+  <!-- 颜色信息框 -->
+  <view class='color-info'>
+    <text class='title'>可用余额</text>
+    <text>0.00</text>
+  </view>
+
+  <!-- 提示信息 -->
+  <view class='hint'>
+    <text class='h-title'>余额使用说明</text>
+    <text class='h-message'>· 此余额只可购买商品。</text>
+  </view>
+
+  <!-- 记录列表 -->
+
+  <view class='record-list'>
+    <!-- 标题 -->
+    <text class='list-title'>使用明细</text>
+
+    <view class='list-item' wx:for='{{record}}' wx:key='record_id'>
+      <!-- 图片 -->
+      <image src='{{item.goodimg}}' class='list-img'></image>
+      <!-- 信息 -->
+      <view class='list-info'>
+        <!-- 名字+价格 -->
+        <view class='name_price'>
+          <!-- 名字 -->
+          <text class='name'>{{item.goodname}}</text>
+          <!-- 价格 -->
+          <text class='price'>￥{{item.goodprice}}</text>
+        </view>
+        <!-- 时间 -->
+        <text class='log_time'>{{item.timelog}}</text>
+      </view>
+    </view>
+
+
+  </view>
+
+
+
+</view>

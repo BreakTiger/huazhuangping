@@ -1,0 +1,37 @@
+<!-- 员工投票 -->
+
+<view class='container'>
+
+
+
+  <!-- 员工列表 -->
+  <view class='e-lists'>
+
+    <block wx:for='{{emlist}}' wx:key='emid'>
+      <view class='e-lists-item'>
+        <!-- 员工头像 {{item.url}}-->
+        <image src='{{item.url}}' class='item-img'></image>
+        <!-- 投票信息 -->
+        <view class='item-info'>
+
+          <text class='name'>{{item.name}}</text>
+          <progress backgroundColor='#db8082' color='#b80106' percent='{{item.percen}}'></progress>
+          <text class='number'>已投{{item.vote}}</text>
+
+          <!-- 按钮 -->
+          <view class='item-btn'>
+            <!-- 状态判断 -->
+            <view class='btn1' wx:if='{{item.status==0}}' data-id='{{item.id}}' bindtap='totp'>投票</view>
+            <view class='btn2' wx:if='{{item.status==1}}' bindtap='tishi'>已投</view> 
+          </view>
+        </view>
+      </view>
+    </block>
+
+
+
+
+  </view>
+
+
+</view>

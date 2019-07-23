@@ -1,0 +1,105 @@
+page{
+  background-color: white;
+}
+.recharge-residue{
+  height: 240rpx;
+  background-color: #f7f7f7;
+  padding-bottom: 20rpx;
+}
+.residue-box{
+  height: 240rpx;
+  background-color: white;
+  padding: 40rpx 24rpx 0;
+  box-sizing: border-box;
+}
+.residue-title{
+  color: #333333;
+  margin-bottom: 42rpx;
+}
+.residue-monery{
+  font-size: 60rpx;
+  /* color: #EA84C1; */
+}
+
+.recharge-monery{
+  background-color: white;
+  font-size: 34rpx;
+  padding-top: 40rpx;
+}
+.monery-detail-box{
+    padding: 30rpx 14rpx;
+}
+.monery-detail{
+
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.monery-text{
+  width: 30.33%;
+  height: 80rpx;
+  box-sizing: border-box;
+  border: 1px solid #B80106;
+  margin: 10rpx;
+  border-radius: 20rpx;
+  color:  #B80106;
+  text-align: center; 
+  font-size: 22rpx;
+}
+.monery-text text{
+  font-size: 38rpx;
+}
+
+.monery-detail .active{
+  background-color:#B80106;
+  color: white;
+}
+.monery-text-min{
+  /* font-size: 22rpx; */
+}
+.recharge-way{
+ padding-top: 20rpx;
+ font-size: 34rpx;
+ background-color: #f7f7f7;
+}
+.recharge-way>view{
+  padding: 40rpx 24rpx;
+  color:#333333;
+  background-color: white;
+}
+.way-detail{
+  display: flex;
+  justify-content: space-between;
+  border-top:1px solid #f7f7f7;
+}
+.recharge-quick{
+  font-size: 34rpx;
+  background-color: white;
+  padding: 20rpx 24rpx;
+}
+.quick-top{
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30rpx
+}
+.quick-top view{
+  width: 480rpx;
+  height: 72rpx;
+  color: white;
+  border-radius: 44rpx;
+  text-align: center;
+  line-height: 72rpx;  
+  font-size: 30rpx;
+  background: #B80106
+}
+.quick-bottom{
+  font-size: 24rpx;
+  color: #999999;
+  text-align: center;
+  margin-top: 30rpx
+}
+.quick-bottom text{
+   color: #B80106; 
+}

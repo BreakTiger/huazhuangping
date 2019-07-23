@@ -1,0 +1,42 @@
+
+<!-- 我的分销 -->
+
+<view class='all-container'>
+
+  <!-- 顶部选项导航 -->
+  <view class='tablist'>
+
+    <view wx:for="{{tabList}}" wx:key='ss' class='item {{current==index?"select":""}}' data-pos='{{index}}' bindtap='tabItemClick'>
+      <text>{{item}}</text>
+    </view>
+
+  </view>
+
+  <view class='content'>
+
+    <!-- 一级 -->
+    <view class='level-box' wx:for='{{one}}' wx:key='dd' wx:if='{{current==0}}'>
+      <!-- 图片 -->
+      <!-- <image src='{{item.url}}' class='img_src'></image> -->
+      <!-- 信息 -->
+      <view class='name-level'>
+        <text class='leve2'>{{item.name}}（{{item.phone}}） </text>
+        <text class='level'>会员级别 | 一</text>
+      </view>
+
+    </view>
+
+    <!-- 二级 -->
+    <view class='level-box' wx:for='{{two}}' wx:key='dd' wx:if='{{current==1}}'>
+      <!-- 图片  -->
+      <!-- <image src='{{item.imgsrc}}' class='img_src'></image> -->
+      <!-- 信息  -->
+      <view class='name-level'>
+        <text class='leve2'>{{item.name}}（{{item.phone}}） </text>
+        <text class='level'>会员级别 | 二</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>
